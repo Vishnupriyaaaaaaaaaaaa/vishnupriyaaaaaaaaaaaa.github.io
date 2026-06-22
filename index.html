@@ -1,191 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Vishnupriya R | Notebook</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vishnupriya | Portfolio Notebook</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<div class="desk">
 
-  <!-- Tab navigation - sticky note tabs poking out the right edge -->
-  <nav class="tabs" aria-label="Notebook sections">
-    <button class="tab" data-page="0"><span>cover</span></button>
-    <button class="tab" data-page="1"><span>contents</span></button>
-    <button class="tab" data-page="2"><span>about</span></button>
-    <button class="tab" data-page="3"><span>skills</span></button>
-    <button class="tab" data-page="4"><span>gesture mouse</span></button>
-    <button class="tab" data-page="5"><span>pothole AI</span></button>
-    <button class="tab" data-page="6"><span>contact</span></button>
-  </nav>
+<div class="book-container">
 
-  <div class="notebook" id="notebook">
-    <div class="spine"></div>
-    <div class="page-stack" id="pageStack">
 
-      <!-- PAGE 0 — COVER -->
-      <section class="page cover-page" data-index="0">
-        <div class="page-face front">
-          <p class="kicker">portfolio notebook</p>
-          <h1 class="cover-title">Hi, I'm<br>Vishnupriya<span class="dot">.</span></h1>
-          <p class="cover-sub">MERN Stack Developer &amp; Machine Learning enthusiast — building things that work end-to-end, from the interface to the model.</p>
-          <p class="margin-note cover-note">open me →</p>
-          <div class="cover-stamp">2026 EDITION</div>
-        </div>
-      </section>
+<div class="book" id="book">
 
-      <!-- PAGE 1 — TABLE OF CONTENTS -->
-      <section class="page" data-index="1">
-        <div class="page-face front ruled">
-          <p class="page-tag">001</p>
-          <h2 class="page-title">Table of Contents</h2>
-          <ol class="toc-list">
-            <li><button class="toc-link" data-goto="2"><span class="toc-num">01</span><span class="toc-text">About Me</span><span class="toc-dots"></span><span class="toc-pg">03</span></button></li>
-            <li><button class="toc-link" data-goto="3"><span class="toc-num">02</span><span class="toc-text">Skills &amp; Tools</span><span class="toc-dots"></span><span class="toc-pg">04</span></button></li>
-            <li><button class="toc-link" data-goto="4"><span class="toc-num">03</span><span class="toc-text">Gesture Controlled Virtual Mouse</span><span class="toc-dots"></span><span class="toc-pg">05</span></button></li>
-            <li><button class="toc-link" data-goto="5"><span class="toc-num">04</span><span class="toc-text">Real-Time Pothole Detection</span><span class="toc-dots"></span><span class="toc-pg">06</span></button></li>
-            <li><button class="toc-link" data-goto="6"><span class="toc-num">05</span><span class="toc-text">Get in Touch</span><span class="toc-dots"></span><span class="toc-pg">07</span></button></li>
-          </ol>
-          <p class="margin-note">tap any line to jump ↴</p>
-        </div>
-      </section>
 
-      <!-- PAGE 2 — ABOUT -->
-      <section class="page" data-index="2">
-        <div class="page-face front ruled">
-          <p class="page-tag">01 — about</p>
-          <h2 class="page-title">About Me</h2>
-          <p class="body-text">
-            AI and Machine Learning enthusiast with a strong foundation in deep
-            learning and computer vision. Passionate about building intelligent
-            systems using Python and modern AI frameworks to solve real-world problems.
-          </p>
-          <p class="body-text">
-            Alongside ML, I work as a MERN stack developer — building full-stack
-            web applications with MongoDB, Express, React, and Node.js. I enjoy
-            connecting the two worlds: training a model on one side, then
-            shipping it inside a real, usable interface on the other.
-          </p>
-          <p class="body-text">
-            I like projects that turn a webcam or a sensor into something that
-            actually <em>understands</em> what it's looking at — a hand gesture,
-            a pothole, a pattern in messy data.
-          </p>
-          <div class="washi-tape tape-1"></div>
-        </div>
-      </section>
+<!-- PAGE 1 COVER -->
+<div class="page active">
 
-      <!-- PAGE 3 — SKILLS -->
-      <section class="page" data-index="3">
-        <div class="page-face front ruled">
-          <p class="page-tag">02 — toolkit</p>
-          <h2 class="page-title">Skills &amp; Tools</h2>
-          <ul class="skills-list">
-            <li><span class="skill-mark">●</span>MongoDB, Express.js, React, Node.js (MERN)</li>
-            <li><span class="skill-mark">●</span>Python, NumPy, Pandas</li>
-            <li><span class="skill-mark">●</span>Machine Learning, Deep Learning, CNN</li>
-            <li><span class="skill-mark">●</span>Computer Vision — OpenCV, MediaPipe, YOLO</li>
-            <li><span class="skill-mark">●</span>TensorFlow, Keras, Scikit-learn</li>
-            <li><span class="skill-mark">●</span>Firebase, Raspberry Pi</li>
-            <li><span class="skill-mark">●</span>HTML, CSS, Git, GitHub</li>
-          </ul>
-          <p class="margin-note skills-note">always adding more to this list</p>
-        </div>
-      </section>
+<div class="content cover">
 
-      <!-- PAGE 4 — GESTURE MOUSE -->
-      <section class="page" data-index="4">
-        <div class="page-face front ruled project-page">
-          <p class="page-tag">03 — project</p>
-          <h2 class="page-title">Gesture Controlled<br>Virtual Mouse</h2>
-          <div class="project-media">
-            <video controls preload="metadata" controlslist="nodownload" poster="">
-              <source src="assets/gesture_mouse.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <span class="tape-corner"></span>
-          </div>
-          <p class="body-text">
-            A real-time computer vision system that enables mouse control using
-            hand gestures captured via webcam — no touch, no clicks, just motion.
-          </p>
-          <a class="project-link" href="https://github.com/Vishnupriyaaaaaaaaaaaa/Gesture-Controlled-Virtual-Mouse" target="_blank" rel="noopener">View on GitHub →</a>
-          <p class="margin-note">built with MediaPipe + OpenCV</p>
-        </div>
-      </section>
+<p class="small">PORTFOLIO NOTEBOOK</p>
 
-      <!-- PAGE 5 — POTHOLE DETECTION -->
-      <section class="page" data-index="5">
-        <div class="page-face front ruled project-page">
-          <p class="page-tag">04 — project</p>
-          <h2 class="page-title">Real-Time Pothole<br>Detection &amp; Monitoring</h2>
-          <div class="project-media two-up">
-            <div class="polaroid">
-              <img src="assets/Pothole%20detection%20dashboard.png" alt="Pothole detection dashboard">
-              <span class="polaroid-cap">dashboard</span>
-            </div>
-            <div class="polaroid">
-              <img src="assets/Location.png" alt="Pothole detection map location">
-              <span class="polaroid-cap">live location</span>
-            </div>
-          </div>
-          <p class="body-text">
-            An AI-powered detection and monitoring system using YOLOv8, OpenCV,
-            Raspberry Pi, GPS, and Firebase. It spots potholes from a live video
-            feed, sounds an audio alert, and logs each one to a dashboard with
-            location metadata.
-          </p>
-          <a class="project-link" href="https://github.com/Vishnupriyaaaaaaaaaaaa/Real-Time-Pothole-Detection-System" target="_blank" rel="noopener">View on GitHub →</a>
-          <p class="margin-note">YOLOv8 · Raspberry Pi · GPS</p>
-        </div>
-      </section>
+<h1>
+Hi, I'm<br>
+Vishnupriya.
+</h1>
 
-      <!-- PAGE 6 — CONTACT / BACK COVER -->
-      <section class="page" data-index="6">
-        <div class="page-face front back-cover">
-          <p class="page-tag">05 — reach me</p>
-          <h2 class="page-title">Let's Build Something</h2>
-          <p class="body-text">
-            Always glad to talk computer vision, robotics, or whatever odd
-            sensor-fusion idea is currently living in a Raspberry Pi on my desk.
-          </p>
-          <div class="contact-stamps">
-            <a class="stamp" href="mailto:rvishnupriya943@gmail.com">
-              <span class="stamp-label">Email</span>
-              <span class="stamp-value">rvishnupriya943@gmail.com</span>
-            </a>
-            <a class="stamp" href="https://www.linkedin.com/in/vishnupriyarnath/" target="_blank" rel="noopener">
-              <span class="stamp-label">LinkedIn</span>
-              <span class="stamp-value">/in/vishnupriyarnath</span>
-            </a>
-            <a class="stamp" href="https://github.com/Vishnupriyaaaaaaaaaaaa" target="_blank" rel="noopener">
-              <span class="stamp-label">GitHub</span>
-              <span class="stamp-value">@Vishnupriyaaaaaaaaaaaa</span>
-            </a>
-            <a class="stamp resume" href="assets/VISHNUPRIYA R.pdf" target="_blank" rel="noopener">
-              <span class="stamp-label">Resume</span>
-              <span class="stamp-value">Download PDF ↓</span>
-            </a>
-          </div>
-          <p class="back-cover-footer">© 2026 Vishnupriya R — thanks for reading to the last page.</p>
-        </div>
-      </section>
+<p>
+MERN Stack Developer<br>
+AI & Machine Learning Enthusiast
+</p>
 
-    </div>
-
-    <!-- Page-turn corner control (right edge of book) -->
-    <button class="turn-zone turn-next" id="turnNext" aria-label="Next page"></button>
-    <button class="turn-zone turn-prev" id="turnPrev" aria-label="Previous page"></button>
-  </div>
-
-  <div class="page-indicator" id="pageIndicator" aria-live="polite"></div>
+<div class="open">
+Open →
 </div>
 
+</div>
+
+</div>
+
+
+
+
+<!-- PAGE 2 CONTENT -->
+<div class="page">
+
+
+<div class="content">
+
+
+<h2>Table of Contents</h2>
+
+
+<ul>
+
+<li onclick="goPage(2)">
+About Me
+</li>
+
+<li onclick="goPage(3)">
+Skills
+</li>
+
+
+<li onclick="goPage(4)">
+Projects
+</li>
+
+
+<li onclick="goPage(5)">
+Contact
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- PAGE 3 ABOUT -->
+<div class="page">
+
+<div class="content">
+
+<h2>About Me</h2>
+
+
+<p>
+I am a Computer Science Engineer passionate about building
+full stack applications and intelligent AI systems.
+</p>
+
+
+<p>
+I work with MERN stack and explore Machine Learning,
+Computer Vision and real-world AI solutions.
+</p>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- PAGE 4 SKILLS -->
+<div class="page">
+
+
+<div class="content">
+
+
+<h2>Skills</h2>
+
+
+<div class="skills">
+
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>React</span>
+<span>Node.js</span>
+<span>MongoDB</span>
+<span>Python</span>
+<span>Machine Learning</span>
+<span>OpenCV</span>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PAGE 5 PROJECTS -->
+<div class="page">
+
+
+<div class="content">
+
+
+<h2>Projects</h2>
+
+
+<h3>Gesture Controlled Virtual Mouse</h3>
+
+<p>
+Computer vision project using MediaPipe and OpenCV
+to control mouse movements.
+</p>
+
+
+
+<h3>Real-Time Pothole Detection</h3>
+
+<p>
+YOLO based AI system detecting potholes using camera feed.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PAGE 6 CONTACT -->
+
+<div class="page">
+
+
+<div class="content">
+
+
+<h2>Contact</h2>
+
+
+<p>
+Let's build something amazing 🚀
+</p>
+
+
+<p>
+Email:
+<br>
+rvishnupriya943@gmail.com
+</p>
+
+
+<p>
+LinkedIn / GitHub
+</p>
+
+
+
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+<div class="buttons">
+
+<button id="prev">
+← Previous
+</button>
+
+
+<span id="counter">
+1 / 6
+</span>
+
+
+<button id="next">
+Next →
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
 <script src="script.js"></script>
+
+
 </body>
 </html>
