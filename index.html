@@ -1,263 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vishnupriya | Portfolio Notebook</title>
-
-<link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vishnupriya R | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-
-<div class="book-container">
-
-
-<div class="book" id="book">
-
-
-<!-- PAGE 1 COVER -->
-<div class="page active">
-
-<div class="content cover">
-
-<p class="small">PORTFOLIO NOTEBOOK</p>
-
-<h1>
-Hi, I'm<br>
-Vishnupriya.
-</h1>
-
-<p>
-MERN Stack Developer<br>
-AI & Machine Learning Enthusiast
-</p>
-
-<div class="open">
-Open →
-</div>
-
-</div>
-
-</div>
-
-
-
-
-<!-- PAGE 2 CONTENT -->
-<div class="page">
-
-
-<div class="content">
-
-
-<h2>Table of Contents</h2>
-
-
-<ul>
-
-<li onclick="goPage(2)">
-About Me
-</li>
-
-<li onclick="goPage(3)">
-Skills
-</li>
-
-
-<li onclick="goPage(4)">
-Projects
-</li>
-
-
-<li onclick="goPage(5)">
-Contact
-</li>
-
-
-</ul>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- PAGE 3 ABOUT -->
-<div class="page">
-
-<div class="content">
-
-<h2>About Me</h2>
-
-
-<p>
-I am a Computer Science Engineer passionate about building
-full stack applications and intelligent AI systems.
-</p>
-
-
-<p>
-I work with MERN stack and explore Machine Learning,
-Computer Vision and real-world AI solutions.
-</p>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-<!-- PAGE 4 SKILLS -->
-<div class="page">
-
-
-<div class="content">
-
-
-<h2>Skills</h2>
-
-
-<div class="skills">
-
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>React</span>
-<span>Node.js</span>
-<span>MongoDB</span>
-<span>Python</span>
-<span>Machine Learning</span>
-<span>OpenCV</span>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<!-- PAGE 5 PROJECTS -->
-<div class="page">
-
-
-<div class="content">
-
-
-<h2>Projects</h2>
-
-
-<h3>Gesture Controlled Virtual Mouse</h3>
-
-<p>
-Computer vision project using MediaPipe and OpenCV
-to control mouse movements.
-</p>
-
-
-
-<h3>Real-Time Pothole Detection</h3>
-
-<p>
-YOLO based AI system detecting potholes using camera feed.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<!-- PAGE 6 CONTACT -->
-
-<div class="page">
-
-
-<div class="content">
-
-
-<h2>Contact</h2>
-
-
-<p>
-Let's build something amazing 🚀
-</p>
-
-
-<p>
-Email:
-<br>
-rvishnupriya943@gmail.com
-</p>
-
-
-<p>
-LinkedIn / GitHub
-</p>
-
-
-
-</div>
-
-</div>
-
-
-
-
-</div>
-
-
-
-<div class="buttons">
-
-<button id="prev">
-← Previous
-</button>
-
-
-<span id="counter">
-1 / 6
-</span>
-
-
-<button id="next">
-Next →
-</button>
-
-
-</div>
-
-
-
-</div>
-
-
+<div class="grain-overlay"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#hero" class="nav-mark">V<span class="nav-mark-accent">R</span></a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-resume" href="assets/VISHNUPRIYA-R-resume.pdf" target="_blank" rel="noopener">Resume</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-sigil" aria-hidden="true">
+    <svg viewBox="0 0 200 200" class="sigil-svg">
+      <polygon points="100,8 192,55 192,145 100,192 8,145 8,55" />
+      <polygon points="100,40 162,72 162,128 100,160 38,128 38,72" />
+      <line x1="100" y1="8" x2="100" y2="192" />
+      <line x1="8" y1="55" x2="192" y2="145" />
+      <line x1="192" y1="55" x2="8" y2="145" />
+    </svg>
+  </div>
+
+  <p class="hero-eyebrow">// computer science &amp; engineering</p>
+  <h1 class="hero-name">VISHNUPRIYA<span class="hero-name-r">R</span></h1>
+  <p class="hero-role">AI / COMPUTER VISION ENGINEER &nbsp;—&nbsp; FULL-STACK DEVELOPER</p>
+
+  <p class="hero-desc">
+    Building systems that watch, detect, and respond — from real-time
+    pothole detection on a moving vehicle to gesture control with nothing
+    but a webcam. Trained in the dark arts of CNNs, deployed on the
+    unglamorous hardware of a Raspberry Pi.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#work" class="btn btn-primary">View Work</a>
+    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span></span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-head">
+    <span class="section-glyph">✚</span>
+    <h2 class="section-title">About</h2>
+    <span class="section-rule"></span>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        Computer Science graduate (2022–2026) with a strong foundation in
+        programming, data structures, and software development. I work
+        across two disciplines that don't always meet: <strong>computer
+        vision / machine learning</strong>, and <strong>full-stack web
+        development</strong>.
+      </p>
+      <p>
+        My projects tend to start with a camera and a question — can this
+        system see a pothole before the tyre does? Can a hand replace a
+        mouse? — and end with something that actually runs on real
+        hardware, not just a notebook. I'm equally comfortable training a
+        YOLOv8 model and wiring up the dashboard that displays its output.
+      </p>
+      <p>
+        Currently sharpening both sides: shipping AI-powered features
+        inside real web applications, and going deeper into the systems
+        that make computer vision reliable outside a lab.
+      </p>
+    </div>
+
+    <div class="about-stats">
+      <div class="stat-card">
+        <span class="stat-num">7.0</span>
+        <span class="stat-label">CGPA — B.Tech CSE</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">9.3</span>
+        <span class="stat-label">CGPA — Higher Secondary</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">2026</span>
+        <span class="stat-label">Graduating</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">03</span>
+        <span class="stat-label">Certifications</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="section-head">
+    <span class="section-glyph">✚</span>
+    <h2 class="section-title">Arsenal</h2>
+    <span class="section-rule"></span>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-block">
+      <h3>Languages</h3>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">SQL</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <h3>Web</h3>
+      <div class="tag-row">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">React</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">Node.js</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <h3>AI / ML</h3>
+      <div class="tag-row">
+        <span class="tag">OpenCV</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">Keras</span>
+        <span class="tag">YOLO</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Scikit-learn</span>
+      </div>
+    </div>
+    <div class="skill-block">
+      <h3>Tools &amp; Platforms</h3>
+      <div class="tag-row">
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">VS Code</span>
+        <span class="tag">Google Colab</span>
+        <span class="tag">Firebase</span>
+        <span class="tag">Raspberry Pi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="section-head">
+    <span class="section-glyph">✚</span>
+    <h2 class="section-title">Work</h2>
+    <span class="section-rule"></span>
+  </div>
+
+  <div class="work-list">
+
+    <article class="work-card">
+      <div class="work-media">
+        <video controls preload="metadata" controlslist="nodownload">
+          <source src="assets/gesture_mouse.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="work-info">
+        <p class="work-tag">01 — computer vision</p>
+        <h3 class="work-title">Gesture-Controlled Virtual Mouse</h3>
+        <p class="work-desc">
+          A real-time computer vision application that replaces the mouse
+          entirely. Hand landmarks tracked via MediaPipe drive cursor
+          movement, clicks, and scrolling — no physical device required.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">MediaPipe</span>
+          <span class="tag">NumPy</span>
+        </div>
+        <a class="work-link" href="https://github.com/Vishnupriyaaaaaaaaaaaa/Gesture-Controlled-Virtual-Mouse" target="_blank" rel="noopener">View Repository →</a>
+      </div>
+    </article>
+
+    <article class="work-card reverse">
+      <div class="work-media two-up">
+        <img src="assets/Pothole%20detection%20dashboard.png" alt="Pothole detection dashboard">
+        <img src="assets/Location.png" alt="Pothole detection live location map">
+      </div>
+      <div class="work-info">
+        <p class="work-tag">02 — embedded AI</p>
+        <h3 class="work-title">Real-Time Pothole Detection &amp; Alert System</h3>
+        <p class="work-desc">
+          A YOLOv8n-based detection pipeline running on a Raspberry Pi,
+          reading a live webcam feed from a vehicle. Detections are
+          geo-tagged via a NEO-6M GPS module, logged to a live Firebase
+          dashboard, and paired with instant audio alerts for the driver.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">YOLOv8</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">NEO-6M GPS</span>
+          <span class="tag">Firebase</span>
+        </div>
+        <a class="work-link" href="https://github.com/Vishnupriyaaaaaaaaaaaa/Real-Time-Pothole-Detection-System" target="_blank" rel="noopener">View Repository →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section" id="certs">
+  <div class="section-head">
+    <span class="section-glyph">✚</span>
+    <h2 class="section-title">Certifications</h2>
+    <span class="section-rule"></span>
+  </div>
+
+  <ul class="cert-list">
+    <li>
+      <span class="cert-name">Artificial Intelligence</span>
+      <span class="cert-issuer">Infosys Springboard</span>
+      <span class="cert-date">March 2026</span>
+    </li>
+    <li>
+      <span class="cert-name">IBM AI Developer</span>
+      <span class="cert-issuer">Coursera</span>
+      <span class="cert-date">Feb 2026</span>
+    </li>
+    <li>
+      <span class="cert-name">ICMTIF 2025 Conference</span>
+      <span class="cert-issuer">Presented Paper</span>
+      <span class="cert-date">2025</span>
+    </li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="section-head">
+    <span class="section-glyph">✚</span>
+    <h2 class="section-title">Get in Touch</h2>
+    <span class="section-rule"></span>
+  </div>
+
+  <p class="contact-lede">
+    Open to opportunities in AI/ML engineering, computer vision, and
+    full-stack development. Reach out — I read everything.
+  </p>
+
+  <div class="contact-grid">
+    <a class="contact-card" href="mailto:rvishnupriya943@gmail.com">
+      <span class="contact-label">Email</span>
+      <span class="contact-value">rvishnupriya943@gmail.com</span>
+    </a>
+    <a class="contact-card" href="tel:+917907737186">
+      <span class="contact-label">Phone</span>
+      <span class="contact-value">+91 79077 37186</span>
+    </a>
+    <a class="contact-card" href="https://www.linkedin.com/in/vishnupriyarnath/" target="_blank" rel="noopener">
+      <span class="contact-label">LinkedIn</span>
+      <span class="contact-value">/in/vishnupriyarnath</span>
+    </a>
+    <a class="contact-card" href="https://github.com/Vishnupriyaaaaaaaaaaaa" target="_blank" rel="noopener">
+      <span class="contact-label">GitHub</span>
+      <span class="contact-value">@Vishnupriyaaaaaaaaaaaa</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Vishnupriya R. Built with intent.</p>
+</footer>
 
 <script src="script.js"></script>
-
-
 </body>
 </html>
