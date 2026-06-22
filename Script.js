@@ -1,62 +1,88 @@
 const pages = document.querySelectorAll(".page");
-
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
-
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
 const counter = document.getElementById("counter");
-
 
 let current = 0;
 
 
+function updateBook(){
 
-function showPage(index){
+    pages.forEach((page,index)=>{
 
-
-if(index < 0 || index >= pages.length)
-return;
-
-
-
-pages[current].classList.remove("active");
-
-
-current=index;
+        page.classList.remove(
+            "front",
+            "back",
+            "current"
+        );
 
 
-pages[current].classList.add("active");
+        if(index < current){
+
+            page.classList.add("back");
+
+        }
+        else if(index === current){
+
+            page.classList.add("current");
+
+        }
+        else{
+
+            page.classList.add("front");
+
+        }
+
+    });
 
 
-
-counter.innerText =
-`${current+1} / ${pages.length}`;
+    counter.innerText =
+    `${current+1} / ${pages.length}`;
 
 
 }
 
 
 
-
-next.onclick=()=>{
-
-showPage(current+1);
-
-}
+nextBtn.addEventListener("click",()=>{
 
 
+    if(current < pages.length-1){
 
-prev.onclick=()=>{
+        current++;
 
-showPage(current-1);
+        updateBook();
 
-}
+    }
 
+
+});
 
 
 
-function goPage(num){
+prevBtn.addEventListener("click",()=>{
 
-showPage(num);
+
+    if(current > 0){
+
+        current--;
+
+        updateBook();
+
+    }
+
+
+});
+
+
+
+
+
+function goPage(number){
+
+    current = number;
+
+    updateBook();
 
 }
 
@@ -68,50 +94,26 @@ document.addEventListener(
 (e)=>{
 
 
-if(e.key==="ArrowRight")
-showPage(current+1);
+if(e.key==="ArrowRight" && current < pages.length-1){
+
+current++;
+
+updateBook();
+
+}
 
 
+if(e.key==="ArrowLeft" && current >0){
 
-if(e.key==="ArrowLeft")
-showPage(current-1);
+current--;
 
+updateBook();
 
-});
-
-
-
-
-
-let startX=0;
-
-
-document.addEventListener(
-"touchstart",
-(e)=>{
-
-startX=e.touches[0].clientX;
-
-});
-
-
-
-document.addEventListener(
-"touchend",
-(e)=>{
-
-
-let endX=e.changedTouches[0].clientX;
-
-
-if(startX-endX>50)
-showPage(current+1);
-
-
-
-if(endX-startX>50)
-showPage(current-1);
-
+}
 
 
 });
+
+
+
+updateBook();
