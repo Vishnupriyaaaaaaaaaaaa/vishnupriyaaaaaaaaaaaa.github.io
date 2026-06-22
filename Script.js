@@ -1,119 +1,44 @@
-const pages = document.querySelectorAll(".page");
-const nextBtn = document.getElementById("next");
-const prevBtn = document.getElementById("prev");
-const counter = document.getElementById("counter");
+(function () {
+  
+  const revealEls = document.querySelectorAll(
+    ".section-head, .about-text, .about-stats, .skill-block, .work-card, .cert-list li, .contact-lede, .contact-grid"
+  );
 
-let current = 0;
+  revealEls.forEach((el) => el.classList.add("reveal"));
 
-
-function updateBook(){
-
-    pages.forEach((page,index)=>{
-
-        page.classList.remove(
-            "front",
-            "back",
-            "current"
-        );
-
-
-        if(index < current){
-
-            page.classList.add("back");
-
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-visible");
+          observer.unobserve(entry.target);
         }
-        else if(index === current){
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+  );
 
-            page.classList.add("current");
+  revealEls.forEach((el) => observer.observe(el));
 
+  // Active nav link highlight based on scroll position
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const sections = document.querySelectorAll(".section, .hero");
+
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => {
+            link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+          });
         }
-        else{
+      });
+    },
+    { threshold: 0.4 }
+  );
 
-            page.classList.add("front");
-
-        }
-
-    });
-
-
-    counter.innerText =
-    `${current+1} / ${pages.length}`;
-
-
-}
-
-
-
-nextBtn.addEventListener("click",()=>{
-
-
-    if(current < pages.length-1){
-
-        current++;
-
-        updateBook();
-
-    }
-
-
-});
-
-
-
-prevBtn.addEventListener("click",()=>{
-
-
-    if(current > 0){
-
-        current--;
-
-        updateBook();
-
-    }
-
-
-});
-
-
-
-
-
-function goPage(number){
-
-    current = number;
-
-    updateBook();
-
-}
-
-
-
-
-document.addEventListener(
-"keydown",
-(e)=>{
-
-
-if(e.key==="ArrowRight" && current < pages.length-1){
-
-current++;
-
-updateBook();
-
-}
-
-
-if(e.key==="ArrowLeft" && current >0){
-
-current--;
-
-updateBook();
-
-}
-
-
-});
-
-
-
-updateBook();
+  sections.forEach((sec) => {
+    if (sec.id) navObserver.observe(sec);
+  });
+})();
