@@ -130,7 +130,5 @@
     }
     touchStartX = null;
   }, { passive: true });
-
-  // initial paint
   render(null, current, true);
 })();
