@@ -31,7 +31,7 @@ body {
 
 a { color: inherit; }
 
-/* faint grain texture across the whole page for material edge */
+
 .grain-overlay {
   position: fixed;
   inset: 0;
@@ -43,9 +43,7 @@ a { color: inherit; }
   mix-blend-mode: overlay;
 }
 
-/* ============================================
-   NAV
-   ============================================ */
+
 .nav {
   position: fixed;
   top: 0;
@@ -112,9 +110,7 @@ a { color: inherit; }
   border-color: var(--red);
 }
 
-/* ============================================
-   HERO
-   ============================================ */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -259,9 +255,6 @@ a { color: inherit; }
   100% { top: 100%; }
 }
 
-/* ============================================
-   SECTION SHELL
-   ============================================ */
 .section {
   padding: 130px 6%;
   max-width: 1180px;
@@ -292,9 +285,7 @@ a { color: inherit; }
   background: linear-gradient(90deg, var(--red-deep), transparent);
 }
 
-/* ============================================
-   ABOUT
-   ============================================ */
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -336,9 +327,7 @@ a { color: inherit; }
   color: var(--grey);
 }
 
-/* ============================================
-   SKILLS
-   ============================================ */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -373,9 +362,7 @@ a { color: inherit; }
   color: var(--red-bright);
 }
 
-/* ============================================
-   WORK
-   ============================================ */
+
 .work-list {
   display: flex;
   flex-direction: column;
@@ -448,9 +435,7 @@ a { color: inherit; }
   border-color: var(--red-bright);
 }
 
-/* ============================================
-   CERTIFICATIONS
-   ============================================ */
+
 .cert-list {
   list-style: none;
   display: flex;
@@ -482,9 +467,7 @@ a { color: inherit; }
   color: var(--red-bright);
 }
 
-/* ============================================
-   CONTACT
-   ============================================ */
+
 .contact-lede {
   max-width: 56ch;
   font-size: 1.05rem;
@@ -524,9 +507,7 @@ a { color: inherit; }
   word-break: break-word;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+
 .footer {
   text-align: center;
   padding: 40px 6%;
@@ -536,9 +517,7 @@ a { color: inherit; }
   border-top: 1px solid var(--grey-dim);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
+
 @media (max-width: 880px) {
   .nav-links { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
