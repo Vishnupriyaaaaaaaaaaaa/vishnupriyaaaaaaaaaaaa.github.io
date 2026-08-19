@@ -73,7 +73,7 @@
     } else {
       const range = [];
       for (let i = targetIndex; i < current; i++) range.push(i);
-      range.reverse(); 
+      range.reverse(); // flip the page nearest 'current' first
       range.forEach((i, idx) => {
         const page = pages[i];
         const delay = idx * stagger;
@@ -109,13 +109,13 @@
     link.addEventListener("click", () => goTo(Number(link.dataset.goto)));
   });
 
-  
+  // keyboard navigation
   window.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" || e.key === "PageDown") goTo(current + 1);
     if (e.key === "ArrowLeft" || e.key === "PageUp") goTo(current - 1);
   });
 
-
+  // basic swipe support for touch devices
   let touchStartX = null;
   const notebook = document.getElementById("notebook");
   notebook.addEventListener("touchstart", (e) => {
@@ -130,5 +130,7 @@
     }
     touchStartX = null;
   }, { passive: true });
+
+  // initial paint
   render(null, current, true);
 })();
